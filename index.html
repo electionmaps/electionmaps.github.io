@@ -33,26 +33,16 @@
     <div id="map"></div>
 
     <script>
-//      function getColorFor(str) {
-//        // java String#hashCode
-//        var hash = 0;
-//        for (var i = 0; i < str.length; i++) {
-//          hash = str.charCodeAt(i) + ((hash << 5) - hash);
-//        }
-//        var red = (hash >> 24) & 0xff;
-//        var grn = (hash >> 16) & 0xff;
-//        var blu = (hash >> 8) & 0xff;
-//        return "rgb(" + red + "," + grn + "," + blu + ")";
-//      }
+
 
           function getColorFor(value) {
-                return value >= 8 ? '#2166ac':
-                       value >= 5  ? '#549ec9':
+                return value >= 9 ? '#2166ac':
+                       value >= 6  ? '#549ec9':
                        value >= 2  ? '#bedaea':
                        value >= -2  ? '#ffffbf':
-					   value >= -5  ? '#fddbc7':
-					   value >= -8  ? '#ef8a62':
-                                          '#b2182b';
+		value >= -6  ? '#fddbc7':
+		value >= -9  ? '#ef8a62':
+                 '#b2182b';
             }
 
       var background = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}', {
