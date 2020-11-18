@@ -13,7 +13,9 @@
     <script type="text/javascript" src="https://sandcastle.cesium.com/Sandcastle-header.js"></script>
     <script
       type="text/javascript"
-      src="https://sandcastle.cesium.com/CesiumUnminified/Cesium.js"></script>
+      src="https://sandcastle.cesium.com/CesiumUnminified/Cesium.js"
+      
+    ></script>
 
   </head>
   <body
@@ -45,7 +47,8 @@ Sandcastle.addToolbarMenu(
         viewer.camera.flyHome(0);
         viewer.dataSources.add(
           Cesium.KmlDataSource.load(
-            "https://electionmaps.github.io/test.kml"
+            "https://sandcastle.cesium.com/SampleData/kml/facilities/facilities.kml",
+            options
           )
         );
       },
@@ -56,11 +59,12 @@ Sandcastle.addToolbarMenu(
         viewer.camera.flyHome(0);
         viewer.dataSources.add(
           Cesium.KmlDataSource.load(
-            "https://electionmaps.github.io/test.kml"
+            "https://sandcastle.cesium.com/SampleData/kml/gdpPerCapita2008.kmz",
+            options
           )
         );
       },
-    }
+    },
 
   ],
   "toolbar"
